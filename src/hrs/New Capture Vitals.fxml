@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hrs.RegVitalsController">
+   <top>
+      <HBox style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="150.0" style="-fx-background-color: #34e7e4e0;">
+               <children>
+                  <Button fx:id="Home" mnemonicParsing="false" onAction="#HomeClicked" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
+                           <image>
+                              <Image url="@icons/icons8-a_home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: bold;" text="Smartacare" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="20.0" left="5.0" right="20.0" top="30.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <TextField promptText=" Search patient record" style="-fx-background-color: transparent;">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
+                           <image>
+                              <Image url="@icons/ic_search_black_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" styleClass="cursor_hand" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
+                           <image>
+                              <Image url="@icons/notifications-bell-button.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
+                           <image>
+                              <Image url="@icons/icons8-man_with_a_calendar.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                      <Button fx:id="Logout" mnemonicParsing="false" onAction="#LogoutButtonClicked" style="-fx-background-color: transparent;" text="Logout">
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/icons8-export.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children></HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox maxWidth="-Infinity" prefWidth="150.0" style="-fx-background-color: white;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" styleClass="hover_border">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-therapy.png" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Inpatient ward" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="50.0" styleClass="hover_border">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-realtime_protection.png" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Isolation ward">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="87.0" styleClass="hover_border">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-thin_test_tube.png" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Laboratory">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="124.0" styleClass="hover_border">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-triangular_bandage.png" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Outpatient ward">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="161.0" styleClass="hover_border">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-pharmacy.png" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Pharmacy">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="198.0" styleClass="hover_border">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-edit_user.png" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Registration">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox alignment="CENTER" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover_border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/icons8-settings_filled.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Settings">
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover_border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/icons8-stack.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Manage Users">
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="hover_border" />
+            <String fx:value="cursor_hand" />
+         </styleClass>
+      </VBox>
+   </left>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="details" prefHeight="116.0" prefWidth="252.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="error" text="Record not found!" textFill="RED" visible="false">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children></HBox>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vitals" textAlignment="CENTER" wrappingWidth="300.13671875" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Calibri Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Height" textAlignment="RIGHT" wrappingWidth="215.625" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Weight" textAlignment="RIGHT" wrappingWidth="215.314453125" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI (Calculated)" textAlignment="RIGHT" wrappingWidth="215.572265625" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature (C)" textAlignment="RIGHT" wrappingWidth="215.76953125" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulse" textAlignment="RIGHT" wrappingWidth="215.0" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respiratory rate" textAlignment="RIGHT" wrappingWidth="215.0" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Pressure" textAlignment="RIGHT" wrappingWidth="215.0" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Oxygen Saturation" textAlignment="RIGHT" wrappingWidth="215.0" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="height" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="weight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="bmi" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="temp" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="pulse" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="resp_rate" layoutX="10.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="40.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="blood_press1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" textAlignment="CENTER" wrappingWidth="24.13671875" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="blood_press2" GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+                  <TextField fx:id="blood_oxy_sat" layoutX="310.0" layoutY="163.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Label text="CM" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="KG" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="KG/M²" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="°C" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="/ Min" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="\%" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="mm / Hg" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="/ Min" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="760.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="Cancel" mnemonicParsing="false" onAction="#CancelClicked" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #34e7e4e0;" text="Cancel">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Preview" mnemonicParsing="false" onAction="#PreviewClicked" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #34e7e4e0;" text="Submit">
+                     <HBox.margin>
+                        <Insets left="200.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

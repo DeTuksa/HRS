@@ -1,0 +1,9 @@
+.hover_border:hover {
+	-fx-border-width: 0px 0px 0px 0px;
+	-fx-background-color: #34e7e4e0;
+	-fx-cursor: hand;
+}
+
+.cursor_hand {
+	-fx-cursor: hand;
+}
