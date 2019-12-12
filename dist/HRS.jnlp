@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="HRS.jar" size="237345" download="eager" />
+    <jar href="HRS.jar" size="237315" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.28.jar" size="875336" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="hrs.HRS"  name="HRS" />
